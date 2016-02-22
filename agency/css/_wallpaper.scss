@@ -1,0 +1,28 @@
+.wallpaper {
+	background-image: linear-gradient(rgba(47,48,53, 0.5), 
+	rgba(47,48,53, 0.5)), 
+	url(../images/wallpaper.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 3rem 0;
+	position: relative;
+
+	h4 {
+		margin-bottom: 4rem;
+	}
+
+	a {
+		border: 0.3rem solid $white;
+		padding: 1.5rem 2.5rem;
+		transition: 0.8s;
+		letter-spacing: 0.3rem;
+		text-decoration: none;		
+	}
+
+	a:hover {
+		border: 0.3rem solid white;
+		color: $blue;
+		background: white;
+	}
+}

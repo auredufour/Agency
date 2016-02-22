@@ -1,0 +1,91 @@
+.wrapperPortfolio {
+	max-width: 1900px;
+	margin: 0 auto;
+}
+
+.galleryFlex {
+	display: flex;
+	flex-flow:row wrap;
+}
+
+.photo {
+	flex: 1 0 20%;
+	position: relative;
+
+	img {
+		width: 100%;
+		display: block;
+	}
+
+	.workHover {
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 1.5rem;
+		right: 1.5rem;
+		bottom: 1.5rem;
+		left: 1.5rem;
+		background: $hoverblue;
+		opacity: 0;
+		transition: 0.5s;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		div {
+			margin: auto;
+			text-align: center;
+		}
+	}
+}
+
+	@media (max-width: 940px) {
+		.photo {
+				flex: 1 0 33.3%;
+				position: relative;
+		}
+		.photo:last-child {
+			display: none;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.galleryFlex {
+			display: block;
+			margin: 10rem;
+		}
+
+		.photo {
+			width: 100%;
+		}
+
+		.photo img{
+			width: 100%;
+			display: block;
+		}
+
+		 .photo .workHover {
+			position: relative;
+			opacity: 1;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	@media (max-width: 480px) {
+	.galleryFlex {
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.photo .workHover {
+		position: relative;
+		opacity: 1;
+	}
+}
+
+
+

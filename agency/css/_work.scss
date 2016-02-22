@@ -1,0 +1,42 @@
+.work {
+
+	ul {
+		width: 70%;
+		margin: 5rem auto;
+		padding: 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+
+	li {
+		list-style: none;
+		padding: 1.5rem 2.5rem;
+		border: 2px solid $blue;
+		transition: 0.8s;
+
+		&:hover {
+			background: $blue;
+			color: $white;
+		}
+	}
+
+	@media (max-width: 768px) {
+		li {
+			padding: 1rem 1.5rem;
+			font-size: 1.3rem;
+		}
+	}
+
+	@media (max-width: 650px) {
+		ul {
+			flex-direction: column;
+		}
+		li {
+			border-bottom: 0px solid transparent;
+		}
+		li:last-child {
+			border-bottom: 2px solid $blue;
+		}		
+	}	
+}

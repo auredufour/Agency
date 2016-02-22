@@ -1,0 +1,67 @@
+$blue: rgba(99,166,159, 1);
+$hoverblue: rgba(99,166,159, 0.7);
+$grey: rgb(47,48,53);
+$headergrey: rgba(47,48,53, 0.5);
+$lightgrey: #808080;
+$darkgrey: #2F3035;
+$white: #fff;
+
+
+html {
+	font-size: 62.5%;
+}
+
+.wrapper {
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.filter {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: $headergrey;
+	}
+.hide {
+	opacity: 0;
+}
+
+@media (max-width: 940px) {
+	.wrapper, .wrapperPortfolio {
+		padding: 0 4rem;
+	}
+}
+
+	@media (max-width: 768px) {
+
+	}
+
+	@media (max-width: 480px) {
+		.wrapper, .wrapperPortfolio {
+		padding: 0 2rem;
+	}
+		
+	}
+
+
+@import "normalize";
+@import "juice";
+@import "typography";
+@import "header";
+@import "navigation";
+@import "section";
+@import "welcome";
+@import "portfolio";
+@import "expert";
+@import "wallpaper";
+@import "work";
+@import "portfolioTwo";
+@import "service";
+@import "number";
+@import "blog";
+@import "partner";
+@import "footer";
+@import "summary";

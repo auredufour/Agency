@@ -1,0 +1,119 @@
+
+.serviceContainer {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	margin: 6rem auto;
+
+	.service {
+		flex: 1 0 calc(33.3% - 4rem);
+		display: flex; 
+		flex-flow: row wrap;
+		text-align: left;
+		align-items: flex-start;
+		margin: 2rem;
+	}
+
+	.serviceText {
+		flex: 1 0 62%;
+
+		h3 {
+			margin: 0 0 1rem;
+			letter-spacing: 0.2rem;
+		}
+
+		p {
+			margin: 0;
+			font-style: normal;
+			font-size: 1.3rem;
+		}
+	}
+
+	.serviceLogo {
+		width: 8rem;
+		height: 8rem;
+		margin:0 2rem;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		border-radius: 50%;
+		border: 3px solid $blue;
+		transition: 0.8s;
+	}
+
+	.serviceLogo:after{
+		  content: '';
+		  display: block;
+		  padding-bottom: 100%;
+	}
+
+	div.serviceLogo:nth-child(3n-2) {
+		margin-left: 0;
+	}
+
+
+	div.circle {
+		width: 7.4rem;
+		height: 7.4rem;
+		border: 3px solid #fff;
+		border-radius: 50%;
+		padding: 0.5rem;
+		position: relative;
+		display: flex;
+	}
+
+	i {
+		color: $blue;
+		font-size: 3rem;
+		padding: 1rem;
+		margin: auto;
+	}
+
+	div.serviceLogo:hover {
+		background: $blue;
+		color: #fff;
+	}
+
+	div.serviceLogo:hover i {
+		color: #fff;
+	}
+
+	@media (max-width: 940px) {
+		div.serviceLogo:nth-child(3n-2) {
+    		margin: 0;
+    	}
+
+		.service {
+			flex: 1 0 calc(50% - 6rem);
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+			margin: 2rem 3rem;
+		}
+
+		.serviceLogo{
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.serviceText {
+			margin-top: 2rem;
+			text-align: center;
+		}
+	}
+}
+
+	@media (max-width: 480px) {
+		.service .responsive {
+			margin: 0 2.5rem 10rem;
+		}
+		 .serviceContainer {
+			display: none;
+		}
+		
+		.service .responsive {
+			display: flex;
+			flex-flow: wrap;
+		}
+	}
+

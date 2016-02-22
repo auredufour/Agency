@@ -1,0 +1,177 @@
+nav {
+	display: flex;
+	padding: 3rem 0;
+	align-items: center;
+	top: 0;
+
+
+	& > * {
+		justify-content: space-between;
+	}
+
+	.navLogo {
+		flex: 1 0 35%;
+		padding-left: 2rem;
+	}
+
+	.navigation {
+		flex: 1 0 65%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		label {
+			padding: 1rem;
+			margin-right: 2rem;
+		}
+		
+		input[type=checkbox]:checked ~ ul {
+			opacity: 0;
+		}
+
+		input[type=checkbox] {
+			display: none;
+		}
+
+		img {
+			width: 1.5rem;			
+			position: relative;
+			top: 0.2rem;
+		}
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			order: -1;
+			opacity: 1;
+			transition: 0.5s;
+			padding: 0;
+			width: calc(100% - 2rem);
+		}
+
+		li {
+			flex: 1 0 14%;
+		}
+
+		a {
+			padding: 1.3rem 1.8rem;
+			border: 3px solid transparent;
+			transition: 0.5s;
+
+	/*  STYLING NEED TO MOVE */
+			text-decoration: none;
+			color: #fff;
+
+			&:hover {
+				border: 3px solid $white;
+			}
+		}
+	}
+
+	@media (max-width: 940px) {
+		.navLogo {
+			flex: 1 0 20%;
+		}
+	
+		.navigation {
+			flex: 1 0 80%;
+			justify-content: flex-end;
+		}
+
+		.navigation input[type=checkbox]:checked +  ul {
+			opacity: 1;
+		}
+
+		.navigation ul {
+			justify-content: flex-end;
+			opacity: 0;
+		}
+	}
+}
+
+	@media (max-width: 850px) {
+		nav {
+			width: 100%;
+			margin: 0 ;
+			position: fixed;
+			left: 0;
+			top:0;
+			padding-bottom: 0;
+			background : $headergrey;
+			z-index: 10;
+		}
+
+		nav .navLogo {
+			position: fixed;
+			padding-left: 2rem;
+		}
+
+		nav .navigation {
+			width: 100%;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+
+		nav .navigation label {
+			right: 2rem;
+		}
+
+	
+		nav .navigation ul {
+			width: 100%;
+			margin: 0;
+			padding-left: 100px;
+			display: none;
+			order: 1;
+			right: 0;
+			opacity: 1;
+			text-align: center;
+			background: #fff;
+		}
+
+		nav .navigation li {
+			padding: 0.5rem;
+			background: #fff;
+			float: left;
+		}
+
+		nav .navigation a {
+			color: $grey;
+		}
+
+		nav .navigation a:hover{
+			border: 3px solid transparent;
+		}
+
+		nav .navigation li a:focus{
+			color: $blue;
+		}
+
+	@media (max-width: 750px){
+		nav .navigation ul{
+			padding-left: 50px;
+		}
+	}
+
+	@media (max-width: 700px){
+		nav .navigation ul{
+			padding-left: 20px;
+		}
+	}
+
+	@media (max-width: 670px){
+		nav .navigation ul {
+			flex-direction: column;
+			background: #fff;
+		}
+
+		nav .navigation li {
+			float: none;
+		}
+	}
+}
+
+ 
+
+ 

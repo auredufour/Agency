@@ -1,0 +1,67 @@
+.numberSection {
+	background: linear-gradient(rgba(47,48,53, 0.5),
+	rgba(47,48,53, 0.5)),
+	url(../images/bg1.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	
+.numberFlex {
+	padding: 5rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+		p {
+			margin: 0;
+			font-weight: 700;
+			color: white;
+			font-style: italic;
+			padding: 2.5rem 0;
+		}
+
+		p:nth-child(2) {
+			font-size: 3rem;
+		}
+	}
+
+	.number div {
+		display: flex;
+		justify-content: center;
+
+		p {
+			margin: 0;
+			display: inline-block;
+
+			// STYLING
+			font-family: "Oswald";
+			color: $blue;
+			font-size: 7rem;
+			font-style: normal;
+		}
+	}
+
+	@media (max-width: 940px) {
+		.numberFlex	p:nth-child(2) {
+			font-size: 2.6rem;
+		}
+
+		.number div p{
+			font-size: 4rem;
+			font-style: normal;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.number{
+			flex: 1 0 50%;
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.numberFlex {
+		// flex-flow: column wrap;
+		justify-content: space-around;
+		}
+	}
+}

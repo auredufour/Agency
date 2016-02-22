@@ -1,0 +1,52 @@
+header {
+	background: url(../images/hero.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 90vh;
+	margin: 0 auto;
+	position: relative;
+
+	.filter {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: $headergrey;
+	}
+	
+	.headerFlex {
+		height: 100%;
+		display: flex;
+		flex-direction: column;	 
+	}
+
+	.headSection{
+		margin: auto;
+		text-align: center;
+	}
+
+
+	@media (max-width: 850px) {
+		.filter {
+			top: 6.7rem;
+		}
+	}
+
+
+	@media (max-width: 480px) {
+		h1 {
+			font-size: 3.8rem;
+		}
+
+		.headSection h2 {
+			font-size: 2rem;
+		}
+
+		.headSection h3 {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+

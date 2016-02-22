@@ -1,0 +1,115 @@
+body {
+	font-family: "Oswald", sans-serif;
+	font-weight: 400;
+}
+
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+
+@mixin letterSpacing ($letterSpacing) {
+	letter-spacing: ($letterSpacing) * 1rem;
+}
+
+.headSection, nav, .photoHover {
+	color: $white;
+} 
+	.offer h3, 
+	.overlay h3, 
+	.offer p, 
+	.overlay p,
+	.workHover div h3,
+	.workHover div p,
+{
+		@include letterSpacing (0.2);
+		color: #fff;
+		text-align: center;
+	}
+
+	.offer p, 
+	.overlay p {
+		color: #fff;
+		@include fontSize (16);
+	}
+
+.wallpaper {
+		p, h4, a{
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+p, h2 {
+	font-family: "Playfair Display", serif;
+}
+
+h1, h3, h4, li {
+	text-transform: uppercase;
+}
+
+h1 {
+	@include fontSize (50);
+	letter-spacing: 1rem;
+	line-height: 7rem;
+	font-weight: 400;
+}
+
+h2 {
+	@include fontSize (24);
+	@include letterSpacing (0.1);
+	font-weight: 300;
+	font-style: italic;
+}
+
+h3 {
+	@include fontSize (15);
+	@include letterSpacing (0.3);
+	font-weight: 400;
+}
+
+h4 {
+	@include fontSize (24);
+	color: $grey;
+	@include letterSpacing (0.3);
+}
+
+p {
+	@include fontSize (13);
+	color: $lightgrey;
+	line-height: 2rem;
+}
+
+.blog p {
+	color: $blue;
+}
+
+li {
+	@include fontSize (13);
+	@include letterSpacing (0.3);
+}
+
+footer li {
+	letter-spacing: 0;
+}
+
+.section p {
+	font-style: italic;
+	@include fontSize(15);
+
+}
+
+.expertFlex p {
+	font-style: normal;
+	@include fontSize(13);
+	letter-spacing: 0.1rem;
+}
+
+.portfolio .offer h3 {
+	@include fontSize (15);
+	@include letterSpacing (0.3);
+	font-weight: 400;
+
+}
+
+

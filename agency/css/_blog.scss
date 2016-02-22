@@ -1,0 +1,249 @@
+.blog {
+
+	.blogFlex {
+		margin: 6rem 0;
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.blogContainer {
+		flex: 1 0 calc(31% - 6rem);
+		margin-left: 3rem;
+		position: relative;
+
+		&:first-child {
+			margin-left: 0%;
+		}
+
+		img:first-child {
+			width: 100%;
+			display: block;
+		}
+	}
+
+	.bckground {
+		position: relative;
+		margin-bottom: 6rem;
+
+		img{ 
+			width: 100%;
+		}
+	}
+
+	.blogPhoto{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+			
+		h3.one , h3.two , h3.three , h3.four {
+			width: 15rem;
+			height: 15rem;
+			margin: auto;
+			border-radius: 50%;
+			display: inline-block;
+			background-color: $hoverblue;
+			padding: 6.5rem 0;
+			color: #fff;
+			transition: 0.5s;
+		}
+
+		img {
+			width: 10rem;
+			height: 10rem;
+			border-radius: 50%;
+			border: 3px solid $blue;
+			position: absolute;
+			bottom: -5rem;
+			left: calc(50% - 5rem);
+			transition: 0.5s;
+		}
+
+		.photoHover {
+			opacity: 0;
+			position: absolute;
+			top: 2rem;
+			right: 2rem;
+			bottom: 2rem;
+			left: 2rem;
+			background: $hoverblue;
+			padding: 2rem;
+			padding-top: 9rem;
+			transition: 0.8s;
+
+			img {
+				display: block;
+				width: 8rem;
+				height: 8rem;
+				border-radius: 50%;
+				border: 2px solid white;
+				margin-left: calc(18% - 4rem);
+				top: 1rem;			
+			}
+
+			p:nth-child(5) {
+				font-style: normal;
+			}
+
+			p {
+				color: #fff;
+				line-height: 2.4rem;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}		
+	}
+
+	@media (max-width: 940px) {
+
+		.blogFlex {
+			margin: 6rem 3rem;
+		}
+
+		.blogContainer {
+			flex: 1 0 100%;
+			margin: 0;
+
+			h3:nth-child(2) {
+				display: none;
+			}
+
+			.bckground{
+				width: 100%;
+			}
+
+			.bckground img{
+				width: 50%;
+			}
+		}
+
+		.blogContainer p:last-child {
+			display: none;
+		}
+
+		.blogPhoto {
+			width: 100%;
+		}
+
+		.blogPhoto img {
+			display: none;
+		}
+
+		.blogPhoto h3 {
+			opacity: 1;
+		}
+
+		.blogContainer .photoHover {
+			width: 50%;
+			padding: 16rem 5rem 5rem;
+			position: relative;
+			right: 1rem;
+			top: 0;
+			left: 0;
+			opacity: 1;
+		}
+
+		.blogContainer .photoHover img {
+			width: 8rem;
+			top: 4rem;
+		}
+
+		.blogPhoto .photoHover img {
+			margin: 0;
+			width: 13rem;
+			height: 13rem;
+			left: calc(50% - 6.5rem)
+		}
+	}
+
+	@media (max-width: 768px) {
+
+		.blogContainer {
+			margin-top: 5rem;
+		}
+
+		.photoHover {
+			display: block;
+		}
+
+		.blogPhoto .photoHover img {
+			left: -22%;
+			top: -20%;
+		}
+
+		.blogPhoto .photoHover p {
+			padding: 0;
+			margin: 0;
+		}
+
+		.blogContainer .photoHover {
+			padding: 10% 3rem;
+		}
+	}
+
+	@media (max-width: 650px) {
+
+		.blogFlex {
+			flex-direction: column;
+		}
+
+		.blogContainer {
+			flex: 1 0 100%;
+			margin-top: 0;
+
+			h3, p {
+				display: block;
+			}
+		}
+
+		.bckground {
+			display: block;
+			flex: 1 0 100%;
+		}
+
+		.blogContainer .bckground img{
+			width: 100%;
+			margin: 0 auto;
+			display: block;	
+		}
+
+		.blogPhoto .photoHover{
+			display: block;
+			width: 100%;
+		}
+
+		.blogPhoto {
+			position: relative;
+		}
+
+		.blogPhoto h3:first-child {
+			position: absolute;
+			top: -110%;
+			left: calc(50% - 7.5rem);
+		}
+
+		.blogPhoto .photoHover{
+			padding: 5rem 2rem;
+		}
+
+		.blogPhoto .photoHover img {
+			display: none;
+		}
+
+		.blogContainer .bckground .blogPhoto img {
+			opacity: 1;
+			width: 10rem;
+			height: 10rem;
+			z-index: 3;
+			top: -5rem;
+			}
+		}
+	}
+
+	
+
