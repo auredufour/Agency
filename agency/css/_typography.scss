@@ -109,7 +109,84 @@ footer li {
 	@include fontSize (15);
 	@include letterSpacing (0.3);
 	font-weight: 400;
-
+}
+.expertFlex, .responsive {
+	div:hover i {
+		color: #fff;
+	}
+	i {
+		color: $blue;
+		@include fontSize (30);
+	}
 }
 
+footer {
+	color: #fff;
+	font-family: "Playfair Display";
+	letter-spacing: 0;
 
+	p {
+	color: #fff;
+	}
+
+	.footerOne, .footerTwo, .footerThree, .footerFour {
+		p {
+			font-size: 1.3rem;
+			letter-spacing: 0;
+		}
+	}
+
+	.footerFour, .footer {
+		line-height: 2rem;
+		letter-spacing: 0.1rem;	
+
+		a {
+			color: #fff;
+		}	
+	}
+}
+
+footer .footerThree ul a{
+	color: #fff;
+}
+
+nav .navigation a {
+	color: #fff;
+}
+
+.numberSection .number div p{
+	font-family: "Oswald";
+	color: $blue;
+	font-size: 7rem;
+	font-style: normal;
+}
+
+@media (max-width: 940px){
+	.numberSection {
+		.numberFlex	p:nth-child(2) {
+			font-size: 2.6rem;
+		}
+		.number div p {
+			font-size: 4rem;
+			font-style: normal;
+		}
+	}
+}
+
+.serviceContainer .serviceText {
+	h3 {
+		letter-spacing: 0.2rem;
+	}
+
+	p {
+		font-style: normal;
+		font-size: 1.3rem;
+	}
+}
+
+.serviceContainer {
+	i {
+		color: $blue;
+		font-size: 3rem;
+	}
+}

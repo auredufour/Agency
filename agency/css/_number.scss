@@ -5,11 +5,11 @@
 	background-attachment: fixed;
 	background-size: cover;
 	
-.numberFlex {
-	padding: 5rem;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
+	.numberFlex {
+		padding: 5rem;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
 
 		p {
 			margin: 0;
@@ -31,26 +31,10 @@
 		p {
 			margin: 0;
 			display: inline-block;
-
-			// STYLING
-			font-family: "Oswald";
-			color: $blue;
-			font-size: 7rem;
-			font-style: normal;
 		}
 	}
-
-	@media (max-width: 940px) {
-		.numberFlex	p:nth-child(2) {
-			font-size: 2.6rem;
-		}
-
-		.number div p{
-			font-size: 4rem;
-			font-style: normal;
-		}
-	}
-
+// MEDIAQUERIES & Responsive Design
+// @ 768px
 	@media (max-width: 768px) {
 		.number{
 			flex: 1 0 50%;
@@ -58,10 +42,19 @@
 		}
 	}
 
+// @480px
 	@media (max-width: 480px) {
 		.numberFlex {
-		// flex-flow: column wrap;
 		justify-content: space-around;
+		}
+	}
+// @400px
+	@media (max-width: 400px){
+		.numberFlex{
+			display: block;
+		}
+		.number {
+			width: 100%;
 		}
 	}
 }

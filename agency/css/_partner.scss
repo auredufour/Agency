@@ -3,9 +3,9 @@
 
 	.wrapperFlex {
 		display: flex;
-		padding: 5rem;
 		align-items: baseline;
 		flex-flow: row wrap;
+		padding: 5rem;
 	}
 
 	.partnerLogo {
@@ -15,10 +15,16 @@
 			width: 80%;
 		}
 	}
-
+// MEDIAQUERIES
 	@media (max-width: 768px) {
 		.partnerLogo {
 			flex: 1 0 50%;
+			text-align: center;
+			
+			img {
+				width: 40%;
+				padding: 1rem 0;
+			}
 		}
 	}
 }

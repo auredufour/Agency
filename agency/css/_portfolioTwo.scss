@@ -43,9 +43,10 @@
 
 	@media (max-width: 940px) {
 		.photo {
-				flex: 1 0 33.3%;
-				position: relative;
+			flex: 1 0 33.3%;
+			position: relative;
 		}
+		
 		.photo:last-child {
 			display: none;
 		}

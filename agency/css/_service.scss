@@ -9,8 +9,8 @@
 		flex: 1 0 calc(33.3% - 4rem);
 		display: flex; 
 		flex-flow: row wrap;
-		text-align: left;
 		align-items: flex-start;
+		text-align: left;
 		margin: 2rem;
 	}
 
@@ -19,13 +19,10 @@
 
 		h3 {
 			margin: 0 0 1rem;
-			letter-spacing: 0.2rem;
 		}
 
 		p {
 			margin: 0;
-			font-style: normal;
-			font-size: 1.3rem;
 		}
 	}
 
@@ -33,38 +30,35 @@
 		width: 8rem;
 		height: 8rem;
 		margin:0 2rem;
+		display: flex;
 		justify-content: center;
 		align-items: center;
-		display: flex;
 		border-radius: 50%;
 		border: 3px solid $blue;
 		transition: 0.8s;
 	}
 
 	.serviceLogo:after{
-		  content: '';
-		  display: block;
-		  padding-bottom: 100%;
+		content: '';
+		display: block;
+		padding-bottom: 100%;
 	}
 
 	div.serviceLogo:nth-child(3n-2) {
 		margin-left: 0;
 	}
 
-
 	div.circle {
 		width: 7.4rem;
 		height: 7.4rem;
+		display: flex;
+		position: relative;
+		padding: 0.5rem;
 		border: 3px solid #fff;
 		border-radius: 50%;
-		padding: 0.5rem;
-		position: relative;
-		display: flex;
 	}
 
 	i {
-		color: $blue;
-		font-size: 3rem;
 		padding: 1rem;
 		margin: auto;
 	}
@@ -80,19 +74,17 @@
 
 	@media (max-width: 940px) {
 		div.serviceLogo:nth-child(3n-2) {
-    		margin: 0;
+    		margin-left: calc(50% - 4rem)
     	}
 
 		.service {
-			flex: 1 0 calc(50% - 6rem);
-			flex-flow: column;
-			align-items: center;
-			justify-content: center;
+			width: calc(50% - 6rem);
+			display: block;
 			margin: 2rem 3rem;
 		}
 
 		.serviceLogo{
-			margin: 0 auto;
+			margin-left: 0 auto;
 			text-align: center;
 		}
 
@@ -112,8 +104,7 @@
 		}
 		
 		.service .responsive {
-			display: flex;
-			flex-flow: wrap;
+			display: block;
 		}
 	}
 

@@ -1,8 +1,8 @@
 .expertContainer {
 	margin: 10rem auto 0;
 	display: flex;
-	justify-content: space-around;
 	flex-flow: row wrap;
+	justify-content: space-around;
 }
 
 .expertFlex, .responsive {
@@ -14,8 +14,6 @@
 		width: 8rem;
 		height: 8rem;
 		display: flex;
-		align-items: center;
-		justify-content: center;
 		margin: 0 auto;
 		border-radius: 50%;
 		border: 3px solid $blue;
@@ -26,13 +24,7 @@
 		background: $blue;
 	}
 
-	div:hover i {
-		color: #fff;
-	}
-
 	i {
-		color: $blue;
-		font-size: 3rem;
 		padding: 1rem;
 		margin: auto;
 	}
@@ -48,7 +40,8 @@
 .expertFlex:first-child {
 	margin: 0;
 }
-
+// MEDIAQUERIES & RESPONSIVE DESIGN
+// @940PX
 @media (max-width: 940px) {
 
 	.expertContainer {
@@ -68,9 +61,8 @@
 		}
 	}
 }
-
+// @480PX
 	@media (max-width: 480px) {
-
 		.expert .responsive {
 			margin: 0 2.5rem;
 		}
@@ -91,14 +83,14 @@
 
 		.responsive summary div, .responsive summary h3{
 			flex: 1 0 50%;
-			text-align: left;
 			margin: 0;
+			text-align: left;
 		}
 		
 		.responsive summary h3 {
-			right: 4rem;
 			position: absolute;
 			top: calc(50% - 1rem);
+			right: 4rem;
 		}
 
 		.responsive details summary::before {

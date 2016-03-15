@@ -2,9 +2,8 @@ header {
 	background: url(../images/hero.jpg) no-repeat;
 	background-size: cover;
 	position: relative;
-	height: 90vh;
 	margin: 0 auto;
-	position: relative;
+	padding: 28rem 0;
 
 	.filter {
 		position: absolute;
@@ -26,13 +25,11 @@ header {
 		text-align: center;
 	}
 
-
 	@media (max-width: 850px) {
 		.filter {
 			top: 6.7rem;
 		}
 	}
-
 
 	@media (max-width: 480px) {
 		h1 {

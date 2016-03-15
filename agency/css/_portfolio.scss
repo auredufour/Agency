@@ -32,6 +32,10 @@
 		border-radius: 50%;
 		text-align: center;
 
+		@media (max-width: 960px){
+			opacity: 0;
+		}
+
 		h3 {
 			width: 8rem;
 			position: absolute;
@@ -42,6 +46,7 @@
 			font-weight: 400;
 		}		
 	}
+
 	.two h3 {
 			top: calc(50% - (8.5rem / 2));
 	}
@@ -54,7 +59,7 @@
 	right: 2rem;
 	bottom: 2rem;
 	left: 2rem;
-	padding: 2rem;
+	padding: 2rem 3rem;
 	background: $hoverblue;
 	transition: 0.8s;
 
@@ -64,7 +69,7 @@
 
 	p {
 		@include fontSize (13);
-		margin-bottom: 1.5rem;
+		margin-bottom: 2rem;
 	}
 
 	a {
@@ -104,91 +109,121 @@
 .responsivePortfolio {
 		display: none;
 	}
-
-	@media (max-width: 1215px){
-		.overlay h3 {
-    	margin-top: 0;
-		}
+// MEDIAQUERIES
+@media (max-width: 1215px){
+	.overlay h3 {
+	margin-top: 0;
 	}
+}
+.overlay:last-child{
+	margin-top: 0.5rem;
+}
 
-	@media (max-width: 1200px){
-		.overlay  {
-			padding: 1.5rem 1rem;
-		}
-		.overlay p {
-			font-size: 1.1rem;
+@media (max-width: 1200px){
+	.overlay  {
+		padding: 1.5rem 1rem;
+	}
+	.overlay p {
+		font-size: 1.1rem;
 		line-height: 1.6rem;
-		}
+	}
 
-		.overlay a {
-			margin-top: 0.5rem;
+	.overlay a {
+		margin-top: 1rem;
+	}
+}
+
+@media (max-width: 1030px) {
+	.portfolioFlex{
+		margin: 0 3.2rem;
+		justify-content: space-between;
+		margin-top: 3rem;
+	}
+	.portfolioOffer {
+		flex: 1 0 calc(50% - 3rem);
+		margin: 0 3rem 3rem 0;
+		background-image: none;
+	}
+
+	.portfolioOffer:nth-child(2n-1){
+		margin-right: 0;
+	}
+
+	.overlay {
+		padding: 5rem;
+	}
+
+	.overlay p {
+		font-size: 1.6rem;
+		line-height: 2.1rem;
+		margin: 2.5rem 0 3rem;
+		padding: 1rem;
+	}
+}
+
+@media (max-width: 960px){
+	.overlay {
+		opacity: 1;
+		padding: 4rem;
+	}
+}
+@media (max-width: 880px){
+	.overlay{
+		padding: 4rem 2rem;
+	}
+}
+@media (max-width: 850px){
+	.overlay {
+		padding: 3rem 2rem;
+	}
+	.overlay p {
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		margin: 2.5rem 0 3rem;
+		padding: 1rem;
+		margin: 0.5rem;
+	}
+	.overlay h3 {
+		margin: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.portfolioFlex{
+		display: none;
+	}
+
+	.wrapperPortfolio .responsivePortfolio {
+		display: flex;
+		flex-flow: wrap;
+		margin: 0 2.5rem;
+	}
+
+	.responsivePortfolio summary {
+		padding-left: 0.5rem;
+	}
+
+	.responsivePortfolio details {
+		flex: 1 0 100%;
+
+		h3 {
+			margin-left: 0;
 		}
 	}
 
-	@media (max-width: 1030px) {
-		.portfolioFlex{
-			margin: 0 3.2rem;
-			justify-content: space-between;
-			margin-top: 3rem;
-		}
-		.portfolioOffer {
-			flex: 1 0 calc(50% - 3rem);
-			margin: 0 3rem 3rem 0;
-			background-image: none;
-		}
-
-		.portfolioOffer:nth-child(2n-1){
-			margin-right: 0;
-		}
-
-		.overlay {
-			padding: 7rem 5rem;
-		}
-
-		.overlay p {
-			font-size: 1.6rem;
-			line-height: 2.1rem;
-			margin: 2.5rem 0 3rem;
-		}
+	.responsivePortfolio p {
+		background: $blue;
+		color: white;
+		padding: 2rem;
+		margin: 0;
 	}
+}
 
-	@media (max-width: 768px) {
-		.portfolioFlex{
-			display: none;
-		}
-
-		.wrapperPortfolio .responsivePortfolio {
-			display: flex;
-			flex-flow: wrap;
-			margin: 0 2.5rem;
-		}
-
-		.responsivePortfolio summary {
-			padding-left: 0.5rem;
-		}
-
-		.responsivePortfolio details {
-			flex: 1 0 100%;
-
-			h3 {
-				margin-left: 0;
-			}
-
-		}
-
-		.responsivePortfolio p {
-			background: $blue;
-			color: white;
-			padding: 2rem;
-			margin: 0;
-		}
+@media (max-width: 480px) {
+	.responsive details {
+		flex: 1 0 100%;
 	}
-
-	@media (max-width: 480px) {
-		.responsive details {
-			flex: 1 0 100%;
-		}
-	}
+}
 
 
 

@@ -35,17 +35,15 @@ html {
 	}
 }
 
-	@media (max-width: 768px) {
-
-	}
-
-	@media (max-width: 480px) {
-		.wrapper, .wrapperPortfolio {
+@media (max-width: 480px) {
+	.wrapper, .wrapperPortfolio {
 		padding: 0 2rem;
 	}
-		
-	}
+}
 
+a {
+	text-decoration: none;
+}
 
 @import "normalize";
 @import "juice";
