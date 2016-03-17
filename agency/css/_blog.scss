@@ -57,7 +57,7 @@
 			left: calc(50% - 5rem);
 			bottom: -5rem;
 			border-radius: 50%;
-			border: 3px solid $blue;
+			border: 0.3rem solid $blue;
 			transition: 0.5s;
 		}
 
@@ -167,93 +167,93 @@
 	}
 
 // @768PX
-	@media (max-width: 768px) {
-		.blogContainer {
-			margin-top: 5rem;
-		}
-
-		.photoHover {
-			display: block;
-		}
-
-		.blogPhoto .photoHover img {
-			left: -5rem;
-			top: -5rem;
-		}
-
-		.blogPhoto .photoHover p {
-			padding: 0;
-			margin: 0;
-		}
-
-		.blogContainer .photoHover {
-			padding: 12% 3rem;
-		}
+@media (max-width: 768px) {
+	.blogContainer {
+		margin-top: 5rem;
 	}
+
+	.photoHover {
+		display: block;
+	}
+
+	.blogPhoto .photoHover img {
+		left: -5rem;
+		top: -5rem;
+	}
+
+	.blogPhoto .photoHover p {
+		padding: 0;
+		margin: 0;
+	}
+
+	.blogContainer .photoHover {
+		padding: 12% 3rem;
+	}
+}
 // @710px
-	@media (max-width: 710px){
-		.blogContainer .photoHover {
-			padding: 8% 3rem;
-		}
+@media (max-width: 710px){
+	.blogContainer .photoHover {
+		padding: 8% 3rem;
 	}
+}
 
 // @650px
-	@media (max-width: 650px) {
+@media (max-width: 650px) {
 
-		.blogFlex {
+	.blogFlex {
+		display: block;
+	}
+
+	.blogContainer {
+		flex: 1 0 100%;
+		margin-top: 0;
+
+		h3, p {
 			display: block;
-		}
-
-		.blogContainer {
-			flex: 1 0 100%;
-			margin-top: 0;
-
-			h3, p {
-				display: block;
-			}
-		}
-
-		.bckground {
-			display: block;
-			flex: 1 0 100%;
-		}
-
-		.blogPhoto .photoHover, .blogContainer .bckground img{
-			width: 100%;
-			display: block;	
-		}
-
-		.blogContainer .bckground img {
-			margin: 0 auto;
-		}
-
-		.blogPhoto {
-			position: relative;
-		}
-
-		.blogPhoto h3:first-child {
-			position: absolute;
-			top: -85%;
-			left: calc(50% - 7.5rem);
-		}
-
-		.blogPhoto .photoHover{
-			padding: 5rem 2rem;
-		}
-
-		.blogPhoto .photoHover img {
-			display: none;
-		}
-
-		.blogContainer .bckground .blogPhoto img {
-			opacity: 1;
-			width: 10rem;
-			height: 10rem;
-			z-index: 3;
-			top: -5rem;
-			}
 		}
 	}
+
+	.bckground {
+		display: block;
+		flex: 1 0 100%;
+	}
+
+	.blogPhoto .photoHover, .blogContainer .bckground img{
+		width: 100%;
+		display: block;	
+	}
+
+	.blogContainer .bckground img {
+		margin: 0 auto;
+	}
+
+	.blogPhoto {
+		position: relative;
+	}
+
+	.blogPhoto h3:first-child {
+		position: absolute;
+		top: -85%;
+		left: calc(50% - 7.5rem);
+	}
+
+	.blogPhoto .photoHover{
+		padding: 5rem 2rem;
+	}
+
+	.blogPhoto .photoHover img {
+		display: none;
+	}
+
+	.blogContainer .bckground .blogPhoto img {
+		opacity: 1;
+		width: 10rem;
+		height: 10rem;
+		z-index: 3;
+		top: -5rem;
+		}
+	}
+}
 
 	
 
